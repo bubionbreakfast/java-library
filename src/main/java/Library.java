@@ -18,10 +18,23 @@ public class Library {
         return this.catalog.size();
     }
 
+
+
     public void addBook(Book book) {
         if(this.catalog.size() < this.capacity){
             this.catalog.add(book);
 
         }
+    }
+
+    public void removeBook(Book book) {
+        if(this.catalog.size() < this.capacity){
+            this.catalog.remove(0);
+        }
+    }
+
+
+    public Book removeBook() {
+        return this.catalog.remove(0);
     }
 }
